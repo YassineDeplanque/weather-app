@@ -15,6 +15,7 @@ function getData() {
     })
     .then(data => {
         let degre = data.main.temp - 273.15;
+        let cityName = data.name
 
         const printDegre = document.getElementById('degre');
         printDegre.innerText = Math.round(degre) + '°C'
@@ -25,6 +26,8 @@ function getData() {
         const iconImg = document.getElementById('img');
         iconImg.src = iconUrl;
 
+        const printCity = document.getElementById('cityName');
+        printCity.innerText = cityName
 
     })
     .catch(error => {
