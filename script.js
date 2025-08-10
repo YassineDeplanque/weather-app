@@ -22,6 +22,14 @@ function getData() {
 
         const printDegre = document.getElementById('degre');
         printDegre.innerText = Math.round(degre) + '°C'
+
+        const iconCode = data.weather[0].icon;
+        const iconUrl = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
+
+        const iconImg = document.getElementById('img');
+        iconImg.src = iconUrl;
+
+
     })
     .catch(error => {
         console.error("Erreur lors de l'appel à l'API :", error);
