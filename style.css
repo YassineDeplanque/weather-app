@@ -44,18 +44,33 @@ button {
   display: flex;
   overflow-x: auto;
   overflow-y: hidden;
-  max-height: 70px;
+  max-height: 120px; /* un peu plus haut pour les 3 éléments */
+  max-width: 300px;
+  gap: 10px; /* espacement horizontal entre blocs */
   padding: 5px 0;
   box-sizing: border-box;
-  max-width: 300px;
-  gap: 1px;
 }
-.scroll-container img {
-  flex-shrink: 0;
+
+.hour-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 50px;
+  gap: 5px;
+}
+
+.hour-block img {
   width: 50px;
   height: 50px;
   object-fit: contain;
   margin: 0;
+}
+
+.scroll-container p {
+  color: white;
+  margin: 0;
+  font-size: 14px;
+  text-align: center;
 }
 
 p{
