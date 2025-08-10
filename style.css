@@ -1,0 +1,41 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8C52FF;
+}
+
+.container {
+
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+h1 {
+    color: white;
+}
+
+input {
+    border-radius: 10px;
+    padding: 7px;
+    border: none;
+}
+
+button {
+    background-color: #debff4;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 100px;
+}
