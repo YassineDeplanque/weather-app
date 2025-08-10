@@ -19,8 +19,13 @@ function getData() {
         let degre = data.main.temp - 273.15;
         console.log(`Température : ${degre}°C`);
         console.log(`Météo : ${data.weather[0].description}`);
+
+        const printDegre = document.getElementById('degre');
+        printDegre.innerText = Math.round(degre) + '°C'
     })
     .catch(error => {
         console.error("Erreur lors de l'appel à l'API :", error);
     });
+
+
 }
