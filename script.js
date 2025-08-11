@@ -1,6 +1,6 @@
 
 function getData() {
-    const apiKey = '2abfbeff36b8b04bb84bafc2903e2e9a';
+    const apiKey = 'your api key';
     const city = document.getElementById('city').value;
 
     const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
@@ -22,19 +22,15 @@ function getData() {
 
         const iconCode = data.weather[0].icon;
         const iconUrl = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
-
         const iconImg = document.getElementById('img');
         iconImg.src = iconUrl;
 
         const printCity = document.getElementById('cityName');
         printCity.innerText = cityName
-
     })
     .catch(error => {
         console.error("Erreur lors de l'appel à l'API :", error);
     });
-
-
 
     fetch(forecastUrl)
     .then(response => {
@@ -59,12 +55,9 @@ function getData() {
             const littleDegreeCode = Math.round(info.list[i].main.temp - 273.15);
             const littleDegree = document.getElementById(`littleDegree${i}`)
             littleDegree.innerText = littleDegreeCode + '°C'
-
         }
     })
     .catch(error => {
         console.error("Erreur lors de l'appel à l'API :", error);
     });
-
-
 }
